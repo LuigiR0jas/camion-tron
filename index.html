@@ -15,20 +15,25 @@
         <a onclick="document.getElementById('new-document').style.display='block'" style="float: right;" class="w3-bar-item w3-button w3-blue w3-hover-indigo w3-mobile"><i class="fa fa-plus"></i> Nuevo documento</a>
     </div>
 
-    <!-- MODAL  -->
+    <!-- DOCUMENT MODAL  -->
     <div id="new-document" class="w3-modal">
-        <div class="w3-modal-content">
-            <header class"w3-container w3-blue">
+        <div class="w3-modal-content w3-card-4 w3-animate-top">
+            <header class"w3-container w3-teal w3-margin">
                 <span onclick="document.getElementById('new-document').style.display='none'" class="w3-button w3-display-topright"><i class="fa fa-close"></i></span>
+                <h2 class="w3-center" >Ingresa los datos del documento</h2>
             </header>
-            <div class="w3-container">                
-                <p>Some text in the Modal..</p>
-                <p>Some text in the Modal..</p>
+            <div class="w3-container w3-margin">
+                <input class="w3-input w3-border w3-round w3-margin" type="text" name="name" placeholder="Nombre">
+                <textarea class="w3-input w3-border w3-round w3-margin" type="text" name="description" placeholder="Descripción"></textarea>                
             </div>
+            <footer class="w3-cell-row w3-margin">
+                <a class="w3-button w3-blue w3-hover-indigo w3-mobile w3-round w3-margin">Guardar</a>
+                <a class="w3-button w3-blue w3-hover-indigo w3-mobile w3-round w3-margin">Cancelar</a>
+            </footer>
         </div>
     </div>
-    <!-- END OF MODAL  -->
-    
+    <!-- END OF DOCUMENT MODAL  -->
+
     <div class="w3-container">
         <br>
         <br>
@@ -73,7 +78,7 @@
                     <td>Mario</td>
                     <td>Descripción de documento mario</td>
                     <td>
-                        <a class="w3-button w3-green w3-hover-teal w3-round"><i class="fa fa-edit"></i></a>
+                        <a onclick="document.getElementById('edit-document').style.display='block'"  class="w3-button w3-green w3-hover-teal w3-round"><i class="fa fa-edit"></i></a>
                         <a class="w3-button w3-red w3-hover-pink w3-round"><i class="fa fa-close"></i></a>
                     </td>
                 </tr>
@@ -81,7 +86,7 @@
                     <td>Luigi</td>
                     <td>Descripción de documento luigi</td>
                     <td>
-                        <a class="w3-button w3-green w3-hover-teal w3-round"><i class="fa fa-edit"></i></a>
+                        <a onclick="document.getElementById('edit-document').style.display='block'" class="w3-button w3-green w3-hover-teal w3-round"><i class="fa fa-edit"></i></a>
                         <a class="w3-button w3-red w3-hover-pink w3-round"><i class="fa fa-close"></i></a>
                     </td>
                 </tr>
@@ -89,15 +94,30 @@
                     <td>Samuel</td>
                     <td>Descripción de documento samuel</td>
                     <td>
-                        <a class="w3-button w3-green w3-hover-teal w3-round"><i class="fa fa-edit"></i></a>
+                        <a onclick="document.getElementById('edit-document').style.display='block'"  class="w3-button w3-green w3-hover-teal w3-round"><i class="fa fa-edit"></i></a>
                         <a class="w3-button w3-red w3-hover-pink w3-round"><i class="fa fa-close"></i></a>
                     </td>                                        
-                </tr>
-
-                
+                </tr>  
             </table>
-
         </section>
+            <!-- EDIT MODAL  -->
+    <div id="edit-document" class="w3-modal">
+        <div class="w3-modal-content w3-card-4 w3-animate-bottom">
+            <header class"w3-container w3-teal w3-margin">
+                <span onclick="document.getElementById('edit-document').style.display='none'" class="w3-button w3-display-topright"><i class="fa fa-close"></i></span>
+                <h2 class="w3-center" >Edita los datos del documentos</h2>
+            </header>
+            <div class="w3-container w3-margin">
+                <input class="w3-input w3-border w3-round w3-margin" type="text" name="name" placeholder="Nombre">
+                <textarea class="w3-input w3-border w3-round w3-margin" type="text" name="description" placeholder="Descripción"></textarea>                
+            </div>
+            <footer class="w3-cell-row w3-margin">
+                <a class="w3-button w3-blue w3-hover-indigo w3-mobile w3-round w3-margin">Guardar</a>
+                <a class="w3-button w3-blue w3-hover-indigo w3-mobile w3-round w3-margin">Cancelar</a>
+            </footer>
+        </div>
+    </div>
+    <!-- END OF EDIT MODAL  -->
     </div>
 
 </body>
